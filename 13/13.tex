@@ -1,0 +1,355 @@
+%-------------------------------------------------------------------------------------------
+\documentclass[aspectratio=169,UTF8,11pt]{ctexbeamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{colortbl}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
+%\usepackage{babel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mode<presentation> {
+\usetheme{Madrid}
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[frame number] % To replace the footer line in all slides with a simple slide count uncomment this line
+\setbeamercolor{page number in head/foot}{fg=blue}
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+% User Defined Block %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{setspace}
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{aa}{RGB}{34,139,34}
+\definecolor{lightblue}{rgb}{0,0.85,0.9}
+\definecolor{darkblue}{rgb}{0,0.7,1}
+
+\definecolor{hanblue}{rgb}{0.27, 0.42, 0.81}
+\definecolor{indiagreen}{rgb}{0.07, 0.53, 0.03}
+\definecolor{indianred}{rgb}{0.8, 0.36, 0.36}
+\definecolor{indianyellow}{rgb}{0.89, 0.66, 0.34}
+\definecolor{babypink}{rgb}{0.96, 0.76, 0.76}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamerfont{block body}{size=\small}
+
+\newenvironment<>{blueblock}[1]{%
+  \setbeamercolor{block title}{fg=white,bg=hanblue}%
+  \begin{block}#2{#1}}{\end{block}}
+
+\newenvironment<>{greenblock}[1]{%
+  \setstretch{1.3}\setbeamercolor{block title}{fg=white,bg=indiagreen}%
+  \begin{block}#2{#1}}{\end{block}}
+
+\newenvironment<>{redblock}[1]{%
+  \setstretch{1.3}\setbeamercolor{block title}{fg=white,bg=indianred}%
+  \begin{block}#2{#1}}{\end{block}}
+
+\newenvironment<>{yellowblock}[1]{%
+  \setstretch{1.3}\setbeamercolor{block title}{fg=white,bg=indianyellow}%
+  \begin{block}#2{#1}}{\end{block}}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{graphicx} % Allows including images
+%\usepackage{tikz}
+%\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{listings}
+\lstset{language=C++,
+    columns=flexible,
+   % basicstyle=\scriptsize\ttfamily,                                      % 设定代码字体、大小4
+    basicstyle=\footnotesize\ttfamily,
+    %numbers=left,xleftmargin=2em,framexleftmargin=2em,                   % 在左侧显示行号
+    %numberstyle=\color{darkgray},                                        % 设定行号格式
+    keywordstyle=\color{blue},                                            % 设定关键字格式
+    commentstyle=\color{ao(english)},                                     % 设置代码注释的格式
+    stringstyle=\color{brown},                                            % 设置字符串格式
+    %showstringspaces=false,                                              % 控制是否显示空格
+	%frame=lines,                                                         % 控制外框
+    breaklines,                                                           % 控制是否折行
+    postbreak=\space,                                                     % 控制折行后显示的标识字符
+    breakindent=5pt,                                                      % 控制折行后缩进数量
+    emph={size\_t,array,deque,list,map,queue,set,stack,vector,string,pair,tuple}, % 非内置类型
+    emphstyle={\color{teal}},
+    escapeinside={(*@}{@*)},
+}
+%---------------------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[\textit{智能优化与最优化方法}]{13 Large-scale Global Optimization}
+\author[李长河]{李长河} % Your name
+\institute[CUG] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+中国地质大学（武汉）自动化学院\\ % Your institution for the title page
+\medskip
+\textit{lichanghe@cug.edu.cn} % Your email address
+}
+\date{} % Date, can be changed to a custom date
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usefonttheme[onlymath]{serif}
+\begin{document}
+\maketitle
+\begin{frame}[noframenumbering]           %beamer里重要的概念，每个frame定义一张page
+\centering
+{\large 李长河 \vspace{0.5cm} \\自动化学院710 \vspace{0.5cm}\\ lichanghe@cug.edu.cn}
+\end{frame}
+
+%-----------------------------------------------------------
+
+
+\addtocounter{framenumber}{-1}
+%---------------------------------------------------------------------------------------------
+
+\begin{frame}
+  {Large-scale Global Optimization}
+  \begin{block}{Complex Optimization Problems}
+    \begin{itemize}
+    \item One of the manifestations of complexity is that \alert{the increase in the number of variables} causes the \alert{dimensionality disaster}.
+    \item Large-scale global optimization (LSGO) problems usually contains more than 1000 variables.
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{greenblock}{Application Examples}
+    \begin{itemize}
+      \item The large-scale power system design
+      \item Vehicle routing problems
+      \item Genetic identification
+      \item Inverse chemical kinetics problem
+    \end{itemize}
+  \end{greenblock}
+\end{frame}
+
+\begin{frame}{Contents}
+	\tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{13.1 Large-scale Global Optimization Problems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{13.1.1 Definition}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Large-scale Global Optimization Problems\small{-Definition}}
+  \begin{block}{Complex Optimization Problems}
+    \begin{itemize}
+    \item To effectively solve the large-scale global optimization problem, we normally do not search in the original search space.
+    \item According to the correlation between variables, the problem can be \alert{separable}, \alert{partially separable} or \alert{non-separable}.
+    \end{itemize}
+  \end{block}
+
+  \only<1>{
+  \begin{greenblock}
+    {Fully separable function}
+    $f(\bm{x})$ is a {\bf fully separable} function iff (if and only if) \index{F!fully separable}
+    \begin{align}
+    \min / \max f(\bm{x})=\left(f\left(x_{1}\right), f\left(x_{2}\right),\cdots,  f\left(x_{n}\right)\right) \tag{1}\label{eq13-1}
+    \end{align}
+    where $\bm{x} = \left(x_{1}, x_{2}, \cdots, x_{n}\right)$ is a D-dimensional decision vector.
+  \end{greenblock}
+  }
+
+  \only<2>{
+  \begin{greenblock}
+    {Partially separable function}
+    $f(\bm{x})$ is a {\bf partially separable} function with $m$ independent subcomponents iff \index{P!partially separable}
+    \begin{align}
+    \min / \max f(\bm{x})=\left(f\left(\bm{x_{1}}, \cdots\right),\cdots,  f\left(\cdots,\bm{x_{m}}\right)\right) \tag{2}\label{eq13-2}
+    \end{align}
+    where $\bm{x_{1}}, \cdots, \bm{x_{m}}$ are disjoint sub-vectors of $\bm{x}$ and $2 \leq m<n$.
+  \end{greenblock}
+  }
+
+  \only<3>{
+    \begin{greenblock}
+      {Fully non-separable function}
+      $f(\bm{x})$ is a {\bf fully non-separable} function, if every pair of its decision variables interacts with each other.\index{F!fully non-separable}
+    \end{greenblock}
+  }
+
+  \only<4>{
+    \begin{greenblock}
+      {Partially additively separable function}
+      $f(\bm{x})$ is a {\bf partially additively separable} function iff\index{P!partially additively separable}
+      \begin{align}
+      f(\bm{x})=\sum_{i=1}^{m} f_{i}\left(\bm{x_{i}}\right) \tag{3}\label{eq13-1-4}
+      \end{align}
+      where $\bm{x_{i}}$ are mutually exclusive decision vectors of $f_{i}$ ; $m$ is the number of separable subcomponents.
+    \end{greenblock}
+  }
+  
+\end{frame}
+
+
+\subsection{13.1.2 Difficulties}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Large-scale Global Optimization Problems\small{-Difficulties}}
+  \begin{block}
+    {Difficulties}
+    {\bf Non-separable} and {\bf overlapping} functions are the most difficult to solve:
+    \begin{itemize}
+      \item The search space generally \alert{increases exponentially}.
+      \item The algorithm is easy to \alert{fall into local optima}.
+      \item The objective function generally has the characteristics of \alert{nonlinear}, \alert{non-convex}, \alert{multi-modal} and \alert{non-differentiable}.
+      \item Variables are \alert{partially separable} or \alert{completely non-separable}.
+    \end{itemize}
+    {\bf It is also challenging for EAs to explore the entire search space effectively.}
+  \end{block}
+  \pause
+  \begin{greenblock}{Two branches of metaheuristics}
+    \begin{itemize}
+      \item Space decomposition methods (co-evolution).
+      \item Non-decomposition-based methods.
+    \end{itemize}
+  \end{greenblock}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{13.2 Co-evolution Methods}
+\begin{frame}
+  {Co-evolution Methods}
+  \begin{block}{Methods Mechanism}
+    \begin{itemize}
+      \item Decompose the large-scale global optimization problem into several \alert{low-dimensional sub-problems}.
+      \item Use the \alert{divide-and-conquer method} to solve the large-scale optimization problem.
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{redblock}{Challenge}
+    \begin{itemize}
+      \item The interaction between variables in indivisible problems.
+      \item It will have a great influence on the optimization efficiency of the algorithm.
+    \end{itemize}
+  \end{redblock}
+  \pause
+  \begin{yellowblock}{Solution}
+    Most decomposition methods try to \alert{identify} the interacting variables and \alert{assign} them to the same in the sub-question.
+  \end{yellowblock}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{13.2.1 Co-operative Co-evolution}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Co-evolution Methods\small{-Co-operative Co-evolution}}  
+  \begin{block}{Co-operative co-evolutionary (CC) approach}
+    Potter and De Jong proposed the co-operative co-evolutionary (CC) approach in 1994 to improve the performance of GAs.
+  \end{block}
+  \pause
+  \begin{greenblock}{The framework of classic CC algorithm}
+    \begin{itemize}
+      \item Problem decomposition.
+      \item Subcomponent optimization.
+      \item Cooperative combination.
+    \end{itemize}
+  \end{greenblock}
+  \pause
+  \begin{yellowblock}{Categories}
+    Based on different grouping strategies, the co-evolution algorithms used to solve LSGO problems are mainly divided into two categories: \alert{static grouping methods} and \alert{dynamic grouping methods}.
+  \end{yellowblock}
+\end{frame}
+
+\subsection{13.2.2 Static Grouping}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Co-evolution Methods\small{-Static Grouping}}
+  \begin{block}{Limitations of CC algorithm}
+    \begin{itemize}
+      \item Being tested only for the maximum dimension of 30.
+      \item Being less effective than classical GAs in non-separable problems.
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{greenblock}{Solutions}
+    \begin{itemize}
+      \item Liu et al combined CC framework with FEP (fast evolutionary programming) to solve the problem of 100–1000 dimensional continuous optimization.
+      \item Scholars tried to combine the CC idea with swarm intelligence-based algorithms,
+      such as CPSO-SK and CPSO-HK.
+    \end{itemize}
+  \end{greenblock}
+  \pause
+  \begin{yellowblock}{Limitations of Static grouping}
+    Only effective in low-dimensional problems.
+  \end{yellowblock}
+\end{frame}
+
+
+\subsection{13.2.3 Dynamic Grouping}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{block}{Relationships between static and dynamic Grouping}
+    \begin{itemize}
+      \item They both try to detect the interacting relationship between variables and assign the variables that interacts each other to the same sub-component.
+      \item In static grouping, the number of sub-components $(k)$ is fixed, while in dynamic grouping, the structure of sub-components can be dynamically adjusted.
+    \end{itemize}
+  \end{block}
+  \pause
+  \begin{greenblock}{Categories}
+    Dynamic grouping methods can be divided into two categories based on the substitution of variables in group components: \alert{random dynamic grouping} and \alert{learning-based dynamic grouping}.
+  \end{greenblock}
+\end{frame}
+
+\begin{frame}
+  \begin{greenblock}{DECC-G algorithm}
+    \begin{algorithm}[H]
+      \caption{DECC-G algorithm}
+      \label{alg13-2-2}
+      \While{$termination \, criterion \,is\, not\, fulfilled$}{
+      Set $i=0$\;
+      The $n$-dimensional object vector is randomly divided into $m$ $s$-dimensional subcomponents\;
+      \While{$i<m$}{
+      $i++$\;
+      Evolve the $i$th subcomponent with a certain EA\;
+      }
+      Assign a weight vector for each subcomponent\;
+      Optimize them via a certain EA\;
+      }
+      \end{algorithm}
+  \end{greenblock}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{13.3 Non-decomposition-based Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{13.3.1 PSO-based Algorithms}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\subsection{13.3.2 EDA-based Algorithms}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+\subsection{13.3.3 DE-based Algorithms}
+\begin{frame}
+  \tableofcontents[currentsubsection]
+\end{frame}
+
+
+
+
+
+\end{document}

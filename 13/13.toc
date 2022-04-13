@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{13.1 Large-scale Global Optimization Problems}{6}{0}{1}
+\beamer@subsectionintoc {1}{1}{13.1.1 Definition}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{13.1.2 Difficulties}{11}{0}{1}
+\beamer@sectionintoc {2}{13.2 Co-evolution Methods}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{13.2.1 Co-operative Co-evolution}{17}{0}{2}
+\beamer@subsectionintoc {2}{2}{13.2.2 Static Grouping}{21}{0}{2}
+\beamer@subsectionintoc {2}{3}{13.2.3 Dynamic Grouping}{25}{0}{2}
+\beamer@sectionintoc {3}{13.3 Non-decomposition-based Methods}{29}{0}{3}
+\beamer@subsectionintoc {3}{1}{13.3.1 PSO-based Algorithms}{29}{0}{3}
+\beamer@subsectionintoc {3}{2}{13.3.2 EDA-based Algorithms}{30}{0}{3}
+\beamer@subsectionintoc {3}{3}{13.3.3 DE-based Algorithms}{31}{0}{3}
