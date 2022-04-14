@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  12 APR 2022 16:49
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  14 APR 2022 11:23
 entering extended mode
-**d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/13/13.tex
-(d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/13/13.tex
+**d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/13/13.tex
+(d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/13/13.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-06-01> (D:\0BCH\MiKTeX\tex/latex/ctex\ctexbeamer.cls (D:\0BCH\MiKTeX\tex/latex/ctex/config\ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -1277,18 +1277,66 @@ Missing character: There is no 5 in font nullfont!
  [27
 
 ]
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 329.
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
  [28
 
-] (13.toc) [29
+]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 344.
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+ [29
 
-] (13.toc) [30
+]
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+ [30
 
-] (13.toc) [31
+]
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+ [31
+
+]
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+ [32
+
+]
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+ [33
+
+]
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+ [34
+
+] (13.toc) [35
+
+] (13.toc) [36
+
+] (13.toc) [37
 
 ]
 \tf@nav=\write6
@@ -1302,15 +1350,15 @@ Missing character: There is no 8 in font nullfont!
 
  (13.aux)
 Package rerunfilecheck Info: File `13.out' has not changed.
-(rerunfilecheck)             Checksum: DB4DA400692218680D75E16B6FB98A73;2155.
+(rerunfilecheck)             Checksum: 623E0F6EF8A808C9D6794E950BDF3D2A;2155.
  ) 
 Here is how much of TeX's memory you used:
- 29094 strings out of 411247
- 594188 string characters out of 2834323
+ 29166 strings out of 411247
+ 597030 string characters out of 2834323
  1130922 words of memory out of 3000000
- 48932 multiletter control sequences out of 15000+600000
+ 49004 multiletter control sequences out of 15000+600000
  408606 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 142i,19n,138p,1011b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 142i,19n,138p,1022b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 13.xdv (31 pages, 481304 bytes).
+Output written on 13.xdv (37 pages, 586764 bytes).

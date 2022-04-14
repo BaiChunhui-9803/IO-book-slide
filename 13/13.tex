@@ -278,7 +278,7 @@
   \pause
   \begin{greenblock}{Solutions}
     \begin{itemize}
-      \item Liu et al combined CC framework with FEP (fast evolutionary programming) to solve the problem of 100–1000 dimensional continuous optimization.
+      \item Liu et al. combined CC framework with FEP (fast evolutionary programming) to solve the problem of 100–1000 dimensional continuous optimization.
       \item Scholars tried to combine the CC idea with swarm intelligence-based algorithms,
       such as CPSO-SK and CPSO-HK.
     \end{itemize}
@@ -310,10 +310,25 @@
 \end{frame}
 
 \begin{frame}
-  \begin{greenblock}{DECC-G algorithm}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{block}{}
+		1. Random dynamic grouping
+	\end{block}
+  \begin{block}{DECC-G algorithm}
+    Yang et al. proposed a \alert{DE-based co-evolution algorithm (DECC-G) using random grouping strategy} to attempt to solve the non-decomposing LSGO problem of 500–1000 dimensions.
+    \begin{itemize}
+      \item Decomposed an n-dimensional target vector into \alert{multiple low-dimensional subcomponents}, each of which is \alert{evolved by a self-adaptive DE} with a neighborhood search algorithm.
+      \item Proposed an \alert{adaptive weighting framework} to further improve solutions, which assigns a weight to each of the subcomponents after each cycle.
+      \item An optimization algorithm is used to \alert{optimize these weights}, and the dimension of the optimization problem is much lower than before.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{greenblock}{The framework of the DECC-G algorithm}
     \begin{algorithm}[H]
       \caption{DECC-G algorithm}
-      \label{alg13-2-2}
       \While{$termination \, criterion \,is\, not\, fulfilled$}{
       Set $i=0$\;
       The $n$-dimensional object vector is randomly divided into $m$ $s$-dimensional subcomponents\;
@@ -324,19 +339,151 @@
       Assign a weight vector for each subcomponent\;
       Optimize them via a certain EA\;
       }
-      \end{algorithm}
+    \end{algorithm}
   \end{greenblock}
 \end{frame}
 
+\begin{frame}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{block}{Multilevel CC algorithm (MLCC) algorithm}
+    To improve the performance of DECC-G, Yang et al. proposed \alert{a new multilevel CC algorithm (MLCC)}.
+    \begin{itemize}
+      \item A \alert{decomposer pool} is used in MLCC to reduce the impact of the group size on the objective function evolution.
+      \item Each decomposer specifies a group size, select the current decomposer for grouping objective vector based on \alert{the performance of decomposers} in evolution process, and updates the decomposer.
+    \end{itemize}
+  \end{block}
+  \begin{yellowblock}{The performance of MLCC algorithm}
+    This method is more applicable to most real-word problems. 
+  \end{yellowblock}
+\end{frame}
 
+\begin{frame}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{block}{}
+		2. Learning-based Dynamic Grouping\\
+    Decomposing problems with interactions between variables requires \alert{prior knowledge} of the problem.
+    \begin{itemize}
+      \item In such methods, the identification of interactions between variables is learned by the \alert{characteristic experience of the problems} obtained before or during the optimization process.
+      \item The purpose of this type methods is to increase the chance of of interacting variables being assigned to the same subcomponent.
+      \item Therefore, some learning-based grouping methods come to play.
+    \end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{block}{CCEA-AVP algorithm}
+    Ray and Yao proposed a co-operative co-evolutionary algorithm based on correlation matrix based adaptive variable partitioning (CCEA-AVP).
+    \begin{itemize}
+      \item In the first several cycles of running, a subcomponent contains all the variables, so the evolution process is similar to the standard EA.
+      \item In the following cycle, the decision variables are divided into several sub-components according to the value of the \alert{correlation between decision variables}.
+      \item Thus, the variables whose correlation coefficient is greater than a certain threshold are placed in the \alert{same sub-component}.
+    \end{itemize}
+  \end{block}
+  \begin{blueblock}{CCEA-AVP with an adaptive grouping method}
+    Inspired by CCEA-AVP, CCEA-AVP with an adaptive grouping method was proposed. However, the method based on correlation coefficient has a \alert{large amount of calculations}, and it cannot identify the \alert{nonlinear dependence between variables}.
+  \end{blueblock}
+\end{frame}
+
+\begin{frame}
+  {Co-evolution Methods\small{-Dynamic Grouping}}
+  \begin{block}{CBCC algorithm}
+    A co-evolutionary algorithm was proposed to \alert{allocate computing resources} according to the \alert{contribution of each sub-component} called contribution based cooperative co-evolution(CBCC).
+  \end{block}
+  \begin{blueblock}{The performance of CBCC algorithm}
+    The results show that if there is an \alert{imbalance among the separable and non-separable parts of the fitness value} in the LSGO problem, this method can \alert{significantly reduce the computational time}. 
+  \end{blueblock}
+\end{frame}
+
+% \begin{frame}
+%   {Co-evolution Methods\small{-Dynamic Grouping}}
+%   \only<1>{
+%     \begin{block}{}
+%       To decompose an LSGO problem, we first need to know if there is any interaction between the variables.
+%     \end{block}
+%     \begin{block}{Identifying interactions between variables}
+%       Suppose:
+%       \begin{itemize}
+%         \item ``$\bm{best}$'' is the best solution currently obtained.
+%         \item ``$\bm{new}$'' represents the best individual obtained by the CC optimizer for dimension $i$.
+%         \item ``$\bm{rand}$'' represents an individual randomly selected in the population.
+%       \end{itemize}
+%       According to the following principle, two new individuals will be generated from the above three vectors
+%       \begin{align}
+%         x_{j}=
+%         \begin{cases}
+%         {n e w_{i}} & {\text { if } j=i} \\
+%         {b e s t_{j}} & {\text { otherwise }}
+%         \end{cases} x_{j}'=
+%         \begin{cases}
+%         {n e w_{i}} & {\text { if } j=i} \\
+%         {r a n d_{k}} & {\text { if } j=k} \\
+%         {b e s t_{j}} & {\text { otherwise }}
+%         \end{cases} \tag{4}\label{eq13-2-1}
+%       \end{align}
+%     \end{block}
+%   }
+
+%   \only<2>{
+%     \begin{block}{Identifying interactions between variables}
+%       \begin{align}
+%         x_{j}=
+%         \begin{cases}
+%         {n e w_{i}} & {\text { if } j=i} \\
+%         {b e s t_{j}} & {\text { otherwise }}
+%         \end{cases} x_{j}'=
+%         \begin{cases}
+%         {n e w_{i}} & {\text { if } j=i} \\
+%         {r a n d_{k}} & {\text { if } j=k} \\
+%         {b e s t_{j}} & {\text { otherwise }}
+%         \end{cases} \tag{4}
+%       \end{align}
+%       If $f\left(x'\right)$ is better than $f(x)$, the probability of interaction between dimensions $i$ and $k$ increases.
+%     \end{block}
+%     \begin{greenblock}{CCVIL algorithm}
+%       Based on the above ideas, Chen et al. proposed a method called CCVIL (i.e., CC method with variable interaction learning) that can adjust the group size adaptively. This approach consists of two phases: learning and optimization. In the learning phase, the main purpose is to detected \alert{the interaction between variables}.
+%     \end{greenblock}
+%   }
+% \end{frame}
+
+% \begin{frame}
+%   {Co-evolution Methods\small{-Dynamic Grouping}}
+%   \begin{block}{Theorem 1 Identifying the interaction between two variables}
+%     Suppose $f(\bm{x})$ is an additively separable function, $\forall a, b_{1} \neq b_{2}, \delta \in \mathbb{R}, \delta \neq 0$, if the following condition holds, then $x_p$ and $x_q$ are nonseparable
+%     \begin{align}
+%      \Delta_{\delta, x_{p}}[f](\bm{x})|_{x_{p}=a, x_{q}=b_{1}} \neq \Delta_{ \delta, x_{p}}[f]\left.(\bm{x})\right|_{x_{p}=a, x_{q}=b_{2}} \tag{5}\label{eq13-2-2}
+%     \end{align}
+%     where $\Delta_{\delta, x_{p}}[f](\bm{x})=f\left(\ldots, x_{p}+\delta, \ldots\right)-f\left(\ldots, x_{p}, \ldots\right)$ is the forward difference of $f$ according to variable $x_p$ with the interval $\delta$.
+%   \end{block}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{13.3 Non-decomposition-based Methods}
+\begin{frame}
+  {Non-decomposition-based Methods}
+  \begin{block}{Non-decomposition-based Methods}
+    \begin{itemize}
+      \item The non-decomposed method mainly attempts to improve the performance of the standard meta heuristic algorithm to solve the LSGO problem. 
+      \item Such algorithms focus on defining new mutations, selection and crossover operators, hybridization, opposition-based learning, designing and using local search, sampling operators, or variable population size methods.
+    \end{itemize}
+  \end{block}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{13.3.1 PSO-based Algorithms}
 \begin{frame}
   \tableofcontents[currentsubsection]
 \end{frame}
+
+\begin{frame}
+  {Non-decomposition-based Methods\small{-PSO-based Algorithms}}
+  \begin{block}{Non-decomposition-based Methods}
+    
+  \end{block}
+\end{frame}
+
+
+
+
 
 \subsection{13.3.2 EDA-based Algorithms}
 \begin{frame}

@@ -1,14 +1,14 @@
 # Fdb version 3
-["xdvipdfmx"] 1649753385 "13.xdv" "13.pdf" "13" 1649753385
-  "13.xdv" 1649753384 481304 1e6ceeb9c47dc93143043a9d662af3b5 "xelatex"
+["xdvipdfmx"] 1649906604 "13.xdv" "13.pdf" "13" 1649906605
+  "13.xdv" 1649906604 586764 3ed3bc1da5f2da61592695f7126207b7 "xelatex"
   (generated)
   "13.pdf"
-["xelatex"] 1649753377 "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/13/13.tex" "13.xdv" "13" 1649753385
-  "13.aux" 1649753384 7727 599c25110260d41d69be1761dd9400a4 "xelatex"
-  "13.nav" 1649753384 3911 8fa1d91401a2197bbb895ac2b69a45dd "xelatex"
-  "13.out" 1649753384 2155 db4da400692218680d75e16b6fb98a73 "xelatex"
-  "13.tex" 1649753370 14436 83ace03044f8aaf4577f1d5d89dca41b ""
-  "13.toc" 1649753384 752 741c50bf50d65cb299c3cdbc7c921f4b "xelatex"
+["xelatex"] 1649906596 "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/13/13.tex" "13.xdv" "13" 1649906605
+  "13.aux" 1649906604 8746 ae3e966bbb9534a3b37cc6dbe0807a36 "xelatex"
+  "13.nav" 1649906604 4578 ec1a49e853f99bb222ed8f73e4103560 "xelatex"
+  "13.out" 1649906604 2155 623e0f6ef8a808c9d6794e950bdf3d2a "xelatex"
+  "13.tex" 1649906596 22345 df4bd663314a2987956c926130f28860 ""
+  "13.toc" 1649906604 752 93b40d81272478b7859204c7507484fc "xelatex"
   "C:/Users/Dell/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1643033491 23113792 6402ccc02b1fe146ac073ebe58cc8857 ""
   "D:/0BCH/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/0BCH/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -234,7 +234,7 @@
   "D:/0BCH/MiKTeX/tex/xelatex/xecjk/xeCJK-listings.sty" 1603132118 13930 90d50d7e6766b4772360502f997a9172 ""
   "D:/0BCH/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1603132118 408 1981e3b80ee2804b42048f88981cf6ef ""
   "D:/0BCH/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1603132118 180725 b63aab970a0b297a5ae2ef5421b881ec ""
-  "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/13/13.tex" 1649753370 14436 83ace03044f8aaf4577f1d5d89dca41b ""
+  "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/13/13.tex" 1649906596 22345 df4bd663314a2987956c926130f28860 ""
   (generated)
   "13.aux"
   "13.log"
