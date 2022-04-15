@@ -297,7 +297,7 @@
 
 \begin{frame}
   {Co-evolution Methods\small{-Dynamic Grouping}}
-  \begin{block}{Relationships between static and dynamic Grouping}
+  \begin{block}{Relationships between static and dynamic grouping}
     \begin{itemize}
       \item They both try to detect the interacting relationship between variables and assign the variables that interacts each other to the same sub-component.
       \item In static grouping, the number of sub-components $(k)$ is fixed, while in dynamic grouping, the structure of sub-components can be dynamically adjusted.
@@ -352,9 +352,9 @@
       \item Each decomposer specifies a group size, select the current decomposer for grouping objective vector based on \alert{the performance of decomposers} in evolution process, and updates the decomposer.
     \end{itemize}
   \end{block}
-  \begin{yellowblock}{The performance of MLCC algorithm}
+  \begin{blueblock}{The performance of MLCC algorithm}
     This method is more applicable to most real-word problems. 
-  \end{yellowblock}
+  \end{blueblock}
 \end{frame}
 
 \begin{frame}
@@ -365,7 +365,6 @@
     \begin{itemize}
       \item In such methods, the identification of interactions between variables is learned by the \alert{characteristic experience of the problems} obtained before or during the optimization process.
       \item The purpose of this type methods is to increase the chance of of interacting variables being assigned to the same subcomponent.
-      \item Therefore, some learning-based grouping methods come to play.
     \end{itemize}
 	\end{block}
 \end{frame}
@@ -374,25 +373,35 @@
   {Co-evolution Methods\small{-Dynamic Grouping}}
   \begin{block}{CCEA-AVP algorithm}
     Ray and Yao proposed a co-operative co-evolutionary algorithm based on correlation matrix based adaptive variable partitioning (CCEA-AVP).
+  \end{block}
+  \begin{greenblock}{The framework of CCEA-AVP algorithm}
     \begin{itemize}
       \item In the first several cycles of running, a subcomponent contains all the variables, so the evolution process is similar to the standard EA.
       \item In the following cycle, the decision variables are divided into several sub-components according to the value of the \alert{correlation between decision variables}.
       \item Thus, the variables whose correlation coefficient is greater than a certain threshold are placed in the \alert{same sub-component}.
     \end{itemize}
-  \end{block}
-  \begin{blueblock}{CCEA-AVP with an adaptive grouping method}
-    Inspired by CCEA-AVP, CCEA-AVP with an adaptive grouping method was proposed. However, the method based on correlation coefficient has a \alert{large amount of calculations}, and it cannot identify the \alert{nonlinear dependence between variables}.
-  \end{blueblock}
+  \end{greenblock}
 \end{frame}
 
 \begin{frame}
   {Co-evolution Methods\small{-Dynamic Grouping}}
-  \begin{block}{CBCC algorithm}
-    A co-evolutionary algorithm was proposed to \alert{allocate computing resources} according to the \alert{contribution of each sub-component} called contribution based cooperative co-evolution(CBCC).
+  \begin{greenblock}{}
+    Some other methods inspired by CC algorithm
+  \end{greenblock}
+  \begin{block}{CCEA-AVP with an adaptive grouping method}
+    CCEA-AVP with an adaptive grouping method is inspired by CCEA-AVP.
+    \begin{itemize}
+      \item The method based on correlation coefficient has a \alert{large amount of calculations}.
+      \item It cannot identify the \alert{nonlinear dependence between variables}.
+    \end{itemize}
   \end{block}
-  \begin{blueblock}{The performance of CBCC algorithm}
-    The results show that if there is an \alert{imbalance among the separable and non-separable parts of the fitness value} in the LSGO problem, this method can \alert{significantly reduce the computational time}. 
-  \end{blueblock}
+  \begin{block}{CBCC algorithm}
+    A co-evolutionary algorithm according to the \alert{contribution of each sub-component} called contribution based cooperative co-evolution(CBCC).
+    \begin{itemize}
+      \item Being proposed to \alert{allocate computing resources}.
+      \item Can \alert{significantly reduce the computational time} if there is an imbalance among the separable and non-separable parts of the fitness value in the LSGO problem.
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 % \begin{frame}
@@ -461,12 +470,30 @@
 \section{13.3 Non-decomposition-based Methods}
 \begin{frame}
   {Non-decomposition-based Methods}
-  \begin{block}{Non-decomposition-based Methods}
-    \begin{itemize}
-      \item The non-decomposed method mainly attempts to improve the performance of the standard meta heuristic algorithm to solve the LSGO problem. 
-      \item Such algorithms focus on defining new mutations, selection and crossover operators, hybridization, opposition-based learning, designing and using local search, sampling operators, or variable population size methods.
-    \end{itemize}
-  \end{block}
+  % \begin{columns}[T]
+  %   \column{0.5\textwidth}
+    \begin{block}{Non-decomposition-based Methods}
+      The non-decomposed method mainly attempts to improve the performance of the standard meta heuristic algorithm to solve the LSGO problem.
+    \end{block}
+    % \column{0.4\textwidth}
+    \begin{greenblock}{Such algorithms focus on:}
+      \begin{columns}[T]
+        \column{0.5\textwidth}
+        \begin{itemize}
+          \item Defining new mutations
+          \item Selection and crossover operators
+          \item Hybridization
+          \item Opposition-based learning
+        \end{itemize}
+        \column{0.5\textwidth}
+        \begin{itemize}
+          \item Designing and using local search
+          \item Sampling operators
+          \item Variable population size methods
+        \end{itemize}
+      \end{columns}
+    \end{greenblock}
+  % \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{13.3.1 PSO-based Algorithms}
@@ -518,9 +545,9 @@
   \begin{block}{DE-based Algorithms}
     Because the DE algorithm has the characteristics of simple structure and strong robustness, many researchers have improved the DE algorithm and applied it to LSGO problems.
   \end{block}
-  \begin{greenblock}{LSEDA-GL algorithm}
+  \begin{greenblock}{Mutation operation DE/current-to-pbest}
     \begin{itemize}
-      \item Using the Gaussian sampling, the Levy probability distribution and a restart strategy to prevent premature.
+      \item Optimizing each subcomponent with a random dynamic grouping method and the weight of in the adaptive weighting process.
     \end{itemize}
   \end{greenblock}
 \end{frame}
@@ -532,6 +559,41 @@
   \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
+\begin{frame}
+  {Learning-based Methods}
+  \begin{block}{}
+    Combination optimization problems related to practical engineering are often large-scale problems. Such as the \alert{vehicle routing problem (VRP)} and \alert{bin packing problem (BPP)}.
+  \end{block}
+  \begin{greenblock}{}
+    Algorithms for solving these problems mainly focus on the \alert{exact algorithms} and \alert{heuristic algorithms}.
+  \end{greenblock}
+  \pause
+  \begin{greenblock}{Advantages and disadvantages the methods}
+    \begin{itemize}
+      \item The exact algorithm: Can get the exact optimal solution of the problem but require \alert{a large amount of computation}, only being suitable for solving \alert{small-scale} combinatorial optimization problems.
+      \item The heuristic algorithm: \alert{Fast} but can only get the \alert{approximate optimal solution}.
+    \end{itemize}
+  \end{greenblock}
+  \begin{redblock}{}
+    Both types of algorithms require \alert{a lot of expertise or experience} to design special search strategies for different types of problems in order to obtain good search results and ensure computational performance. 
+  \end{redblock}
+\end{frame}
+
+\begin{frame}
+  {Learning-based Methods}
+  \begin{block}{}
+    With the rise of machine learning, learning methods have been used to solve these difficult optimization problems.
+  \end{block}
+  \begin{block}{Advantages of machine learning methods}
+    \begin{itemize}
+      \item The unique \alert{priori knowledge} of the problem can be learned.
+      \item More effective \alert{heuristic strategies} can be learned.
+    \end{itemize}
+  \end{block}
+  % \begin{greenblock}{Example: Noah’s Ark Lab of Huawei}
+  %   The following is illustrated by the project of Noah’s Ark Lab of Huawei on the integration of vehicle path planning and 3D packing problem.
+  % \end{greenblock}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{13.5 Discussions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  15 APR 2022 11:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  15 APR 2022 16:14
 entering extended mode
 **d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/13/13.tex
 (d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/13/13.tex
@@ -1298,20 +1298,20 @@ Missing character: There is no 2 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 2 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 0 in font nullfont!
  [30
 
 ]
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 5 in font nullfont!
-Missing character: There is no 4 in font nullfont!
+Missing character: There is no 5 in font nullfont!
  [31
 
 ]
 Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 9 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 Missing character: There is no 5 in font nullfont!
@@ -1324,11 +1324,17 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 7 in font nullfont!
 Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 0 in font nullfont!
  [33
 
 ]
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
 Missing character: There is no 0 in font nullfont!
  [34
 
@@ -1336,21 +1342,21 @@ Missing character: There is no 0 in font nullfont!
 
 ]
 Missing character: There is no 2 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 2 in font nullfont!
 Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 Missing character: There is no 0 in font nullfont!
  [36
 
 ] (13.toc) [37
 
 ]
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
 Missing character: There is no 0 in font nullfont!
  [38
 
@@ -1358,16 +1364,55 @@ Missing character: There is no 0 in font nullfont!
 
 ]
 Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
  [40
 
 ] (13.toc) [41
 
-] (13.toc) [42
+]
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+ [42
+
+]
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+ [43
+
+]
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+ [44
+
+] (13.toc) [45
 
 ]
 \tf@nav=\write6
@@ -1384,12 +1429,12 @@ Package rerunfilecheck Info: File `13.out' has not changed.
 (rerunfilecheck)             Checksum: 207E61F0647955CEF1E2D63FD1E3EDF3;2467.
  ) 
 Here is how much of TeX's memory you used:
- 29229 strings out of 411247
- 598961 string characters out of 2834323
- 1130922 words of memory out of 3000000
- 49063 multiletter control sequences out of 15000+600000
+ 29287 strings out of 411247
+ 601361 string characters out of 2834323
+ 1133922 words of memory out of 3000000
+ 49121 multiletter control sequences out of 15000+600000
  408606 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 142i,19n,138p,1022b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 142i,19n,138p,1022b,1007s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 13.xdv (42 pages, 689112 bytes).
+Output written on 13.xdv (45 pages, 774144 bytes).

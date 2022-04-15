@@ -10,4 +10,4 @@
 \beamer@subsectionintoc {3}{2}{13.3.2 EDA-based Algorithms}{37}{0}{3}
 \beamer@subsectionintoc {3}{3}{13.3.3 DE-based Algorithms}{39}{0}{3}
 \beamer@sectionintoc {4}{13.4 Learning-based Methods}{41}{0}{4}
-\beamer@sectionintoc {5}{13.5 Discussions}{42}{0}{5}
+\beamer@sectionintoc {5}{13.5 Discussions}{45}{0}{5}
