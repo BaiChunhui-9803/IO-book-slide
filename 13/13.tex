@@ -601,4 +601,37 @@
   \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
+\begin{frame}
+  {Discussions}
+  \begin{block}{}
+    The large-scale optimization is a significant part of the big-data optimization.
+  \end{block}
+  \begin{block}{Difficulties}
+    \begin{itemize}
+      \item The growth of the dimensions of the problem.
+      \item The efficiency of search will significantly drop as the number of dimensions increases.
+    \end{itemize}
+  \end{block}
+  \begin{greenblock}{Promising approaches}
+    \begin{itemize}
+      \item Problem decomposition
+      \item Dimensionality reduction
+      \item Learning-based search
+    \end{itemize}
+  \end{greenblock}
+\end{frame}
+
+\begin{frame}
+  {Discussions}
+  \begin{block}{Problem decomposition}
+    The dimensionality reduction aims to identify the most significant variables for the problem and hence transforms the problem from high to low dimensions while \alert{preserving the major features}.
+  \end{block}
+  \begin{block}{Dimensionality reduction}
+    The problem decomposition aims to put the most \alert{relevant variables} into one group and hence \alert{divides} the problem into a set of \alert{small scale problems}, and the search is carried out on these small scale problems.
+  \end{block}
+  \begin{block}{Learning-based search}
+    The Learning-based method aims to extract useful information of the problem and uses it as \alert{priori knowledge} of the problem to speed up the search. This is particularly useful for real-world applications.
+  \end{block}
+\end{frame}
+
 \end{document}
