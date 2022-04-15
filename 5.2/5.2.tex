@@ -7,6 +7,9 @@
 \usepackage{booktabs}
 \usepackage{threeparttable}
 \usepackage{hyperref}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e}
 %\usepackage{babel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -78,43 +81,156 @@
 %---------------------------------------------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[\textit{智能优化与最优化方法}]{第一章 XXX}
-%\author[李长河]{李长河} % Your name
-%\institute[CUG] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
-%{
-%中国地质大学（武汉）自动化学院\\ % Your institution for the title page
-%\medskip
-%\textit{lichanghe@cug.edu.cn} % Your email address
-%}
+\title[\textit{智能优化与最优化方法}]{5.2 Evolutionary Programming}
+\author[李长河]{李长河} % Your name
+\institute[CUG] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+中国地质大学（武汉）自动化学院\\ % Your institution for the title page
+\medskip
+\textit{lichanghe@cug.edu.cn} % Your email address
+}
 \date{} % Date, can be changed to a custom date
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\usefonttheme[onlymath]{serif}
 \begin{document}
 \maketitle
-%\begin{frame}[noframenumbering]           %beamer里重要的概念，每个frame定义一张page
-%\centering
-%{\large 李长河 \vspace{0.5cm} \\自动化学院710 \vspace{0.5cm}\\ lichanghe@cug.edu.cn}
-%\end{frame}
+\begin{frame}[noframenumbering]           %beamer里重要的概念，每个frame定义一张page
+\centering
+{\large 李长河 \vspace{0.5cm} \\自动化学院710 \vspace{0.5cm}\\ lichanghe@cug.edu.cn}
+\end{frame}
 
 %-----------------------------------------------------------
 
 
 \addtocounter{framenumber}{-1}
 %---------------------------------------------------------------------------------------------
-\begin{frame}{目录}
+
+\begin{frame}{Contents}
 	\tableofcontents
 \end{frame}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{第一节}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{5.2 Evolutionary Programming}
 \begin{frame}
-        \tableofcontents[currentsection,hideallsubsections]
+  {Evolutionary Programming}
+  \begin{block}{}
+    Evolutionary programming (EP) was firstly proposed to simulate the evolution process and
+    generate artificial intelligence and then applied in optimization domains.
+  \end{block}
 \end{frame}
 
-\section{第二节}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{5.2.1 The Emerging of Evolutionary Programming}
+\begin{frame}
+  \tableofcontents[currentsection,currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Emerging of Evolutionary Programming}}
+  \begin{block}{}
+    There is a consistent pursuing for our human to obtain the artificial intelligence.
+  \end{block}
+  \begin{columns}[T]
+    \column{0.8\textwidth}
+    \begin{greenblock}{About sixty years ago}
+      Researchers attempted to build the model of \alert{natural evolution} to realize the \alert{automatic programming}, \alert{sequence prediction} and so on. For example, Friedberg aimed to design the algorithm to find the program with certain inputs and outputs. 
+    \end{greenblock}
+    \column{0.13\textwidth}
+    \begin{greenblock}{\textit{Friedberg}}
+      The pioneer of automatic programming
+    \end{greenblock}
+  \end{columns}
+  \begin{blueblock}{The performance of the method}
+    Unfortunately, the mechanism proved worse even than a pure random search, resulted mainly by: 
+    \begin{itemize}
+      \item The absence of effective selection pressure
+      \item The extreme disassociation(Small changes in program syntax usually cause large changes in the input-output behaviour of the program)
+    \end{itemize}
+  \end{blueblock}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Emerging of Evolutionary Programming}}
+  \begin{greenblock}{In the 1960s}
+    Having the knowledge of Friedberg’s disappointing results, Bremermann focused on the work of relatively simple optimization problems, especially for the linear programming and convex programming. 
+  \end{greenblock}
+  \begin{blueblock}{The performance of the method}
+    It is too limited for real optimization applications.
+  \end{blueblock}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Emerging of Evolutionary Programming}}
+  \begin{greenblock}{In 1964}
+    L. J.Fogel formally proposed a kind of evolutionary algorithms, called evolutionary programming (EP).
+  \end{greenblock}
+  \begin{greenblock}{The mechanism of EP}
+    The individual, on behalf of a transition table of finite-state-machine (FSM), mutates to reproduce new FSMs, meanwhile, whether the individual was able to mutate in the next generation depended on the \alert{performance in the evaluation testing}. 
+  \end{greenblock}
+  \begin{blueblock}{The performance of the method}
+    Compared with Friedberg’s and Bremermann’s algorithms:
+    \begin{itemize}
+      \item Applying EP algorithm to more sophisticated optimization problems
+      \item Withith appropriate selective pressure provided
+    \end{itemize}
+  \end{blueblock}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Emerging of Evolutionary Programming}}
+  \begin{greenblock}{In 1970s}
+    Nevertheless, the refined work did not receive the remarkable attention in the field, until the \alert{genetic algorithm} and \alert{evolution strategies} were fully accepted in 1970s. 
+  \end{greenblock}
+  \begin{block}{}
+    The limitation in Friedberg and Bremermann’s experiments caused the ignorance of Fogel’s works in almost thirty years. 
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{5.2.2 The Classical Evolutionary Programming}
+\begin{frame}
+  \tableofcontents[currentsection,currentsubsection]
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Classical Evolutionary Programming}}
+  \begin{block}{The characteristic of the initial EP}
+    \begin{itemize}
+      \item Fixed chromosome structure
+      \item Changing numerical parameters evolving along with decision variables
+    \end{itemize}
+  \end{block}
+  \begin{redblock}{}
+    The specific mechanism was brought by many other EAs and obtained a formal term, \alert{self-adaptation}.
+  \end{redblock}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Classical Evolutionary Programming}}
+  \begin{block}{The categories of initial EP algorithms}
+    \begin{itemize}
+      \item \alert{Standard EP}, which has no self-adaptation specialities.
+      \item \alert{Continuous standard EP}, different from the generation-based algorithms, in which, the individual is evaluated and added into the population.
+      \item \alert{Meta-EP}, into which, the variance of mutation step size is cooperated.
+      \item \alert{Continuous meta-EP}, in which, the individual is evaluated and added into the population due to the variance of the mutation operator.
+      \item \alert{Rmeta-EP}, which cooperates covariances and standard deviations for self-adaptation.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{5.2.3 Framework and Parameter Settings}
+\begin{frame}
+  \tableofcontents[currentsection,currentsubsection]
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{5.2.4 Recent Advances in Evolutionary Programming}
+\begin{frame}
+  \tableofcontents[currentsection,currentsubsection]
+\end{frame}
 
 
 \end{document}
