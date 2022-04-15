@@ -65,16 +65,32 @@
 \headcommand {\beamer@subsectionentry {0}{3}{1}{35}{13.3.1 PSO-based Algorithms}}
 \headcommand {\slideentry {3}{1}{1}{35/35}{13.3.1 PSO-based Algorithms}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@subsectionpages {35}{35}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{36}{13.3.2 EDA-based Algorithms}}
-\headcommand {\slideentry {3}{2}{1}{36/36}{13.3.2 EDA-based Algorithms}{0}}
+\headcommand {\slideentry {3}{1}{2}{36/36}{13.3.1 PSO-based Algorithms}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@subsectionpages {36}{36}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{37}{13.3.3 DE-based Algorithms}}
-\headcommand {\slideentry {3}{3}{1}{37/37}{13.3.3 DE-based Algorithms}{0}}
+\headcommand {\beamer@subsectionpages {35}{36}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{37}{13.3.2 EDA-based Algorithms}}
+\headcommand {\slideentry {3}{2}{1}{37/37}{13.3.2 EDA-based Algorithms}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\beamer@partpages {1}{37}}
-\headcommand {\beamer@subsectionpages {37}{37}}
-\headcommand {\beamer@sectionpages {34}{37}}
-\headcommand {\beamer@documentpages {37}}
-\headcommand {\gdef \inserttotalframenumber {23}}
+\headcommand {\slideentry {3}{2}{2}{38/38}{13.3.2 EDA-based Algorithms}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionpages {37}{38}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{39}{13.3.3 DE-based Algorithms}}
+\headcommand {\slideentry {3}{3}{1}{39/39}{13.3.3 DE-based Algorithms}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {3}{3}{2}{40/40}{13.3.3 DE-based Algorithms}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@sectionpages {34}{40}}
+\headcommand {\beamer@subsectionpages {39}{40}}
+\headcommand {\sectionentry {4}{13.4 Learning-based Methods}{41}{13.4 Learning-based Methods}{0}}
+\headcommand {\slideentry {4}{0}{1}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\beamer@sectionpages {41}{41}}
+\headcommand {\beamer@subsectionpages {41}{41}}
+\headcommand {\sectionentry {5}{13.5 Discussions}{42}{13.5 Discussions}{0}}
+\headcommand {\slideentry {5}{0}{1}{42/42}{}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\beamer@partpages {1}{42}}
+\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\beamer@sectionpages {42}{42}}
+\headcommand {\beamer@documentpages {42}}
+\headcommand {\gdef \inserttotalframenumber {28}}

@@ -7,5 +7,7 @@
 \beamer@subsectionintoc {2}{3}{13.2.3 Dynamic Grouping}{25}{0}{2}
 \beamer@sectionintoc {3}{13.3 Non-decomposition-based Methods}{34}{0}{3}
 \beamer@subsectionintoc {3}{1}{13.3.1 PSO-based Algorithms}{35}{0}{3}
-\beamer@subsectionintoc {3}{2}{13.3.2 EDA-based Algorithms}{36}{0}{3}
-\beamer@subsectionintoc {3}{3}{13.3.3 DE-based Algorithms}{37}{0}{3}
+\beamer@subsectionintoc {3}{2}{13.3.2 EDA-based Algorithms}{37}{0}{3}
+\beamer@subsectionintoc {3}{3}{13.3.3 DE-based Algorithms}{39}{0}{3}
+\beamer@sectionintoc {4}{13.4 Learning-based Methods}{41}{0}{4}
+\beamer@sectionintoc {5}{13.5 Discussions}{42}{0}{5}

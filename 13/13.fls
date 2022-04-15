@@ -1639,6 +1639,12 @@ INPUT 13.toc
 INPUT .\13.toc
 INPUT 13.toc
 INPUT 13.toc
+INPUT .\13.toc
+INPUT 13.toc
+INPUT 13.toc
+INPUT .\13.toc
+INPUT 13.toc
+INPUT 13.toc
 OUTPUT 13.nav
 OUTPUT 13.toc
 OUTPUT 13.snm

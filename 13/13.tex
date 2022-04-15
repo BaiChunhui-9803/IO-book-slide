@@ -134,7 +134,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{13.1.1 Definition}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
 \begin{frame}
@@ -191,7 +191,7 @@
 
 \subsection{13.1.2 Difficulties}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
 \begin{frame}
@@ -240,7 +240,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{13.2.1 Co-operative Co-evolution}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
 \begin{frame}
@@ -264,7 +264,7 @@
 
 \subsection{13.2.2 Static Grouping}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
 \begin{frame}
@@ -292,7 +292,7 @@
 
 \subsection{13.2.3 Dynamic Grouping}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
 \begin{frame}
@@ -471,32 +471,72 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{13.3.1 PSO-based Algorithms}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
 \begin{frame}
   {Non-decomposition-based Methods\small{-PSO-based Algorithms}}
-  \begin{block}{Non-decomposition-based Methods}
-    
+  \begin{block}{PSO-based algorithms}
+    Unlike standard PSO, a PSO with \alert{velocity modulation} and \alert{restarting strategy} proposed was proposed.
+    \begin{itemize}
+      \item Velocity modulation controls the directional motion of particles in a finite range.
+      \item Restart strategies are used to prevent premature. If the overall change in the standard deviation of the particle fitness in the whole population is very small, the restart strategy is employed.
+    \end{itemize}
   \end{block}
+  \begin{greenblock}{Incremental particle swarm optimizer with local search (IPSOLS) algorithm}
+    Using a tuning-in-the-loop approach to redesign the IPSOLS.
+    % \\
+    % The redesign process has six stages: selecting the local search method, alteration of calling and controlling the local search method, using vector PSO rules, penalizing bound constraints violation, and fighting stagnation with restarting.
+  \end{greenblock}
 \end{frame}
-
-
-
-
 
 \subsection{13.3.2 EDA-based Algorithms}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
+
+\begin{frame}
+  {Non-decomposition-based Methods\small{-EDA-based Algorithms}}
+  \begin{block}{EDA-based Algorithms}
+    EDA is a random population optimization algorithm based on statistical principles.
+  \end{block}
+  \begin{greenblock}{LSEDA-GL algorithm}
+    \begin{itemize}
+      \item Using the Gaussian sampling, the Levy probability distribution and a restart strategy to prevent premature.
+    \end{itemize}
+  \end{greenblock}
+\end{frame}
+
 
 \subsection{13.3.3 DE-based Algorithms}
 \begin{frame}
-  \tableofcontents[currentsubsection]
+  \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
+\begin{frame}
+  {Non-decomposition-based Methods\small{-DE-based Algorithms}}
+  \begin{block}{DE-based Algorithms}
+    Because the DE algorithm has the characteristics of simple structure and strong robustness, many researchers have improved the DE algorithm and applied it to LSGO problems.
+  \end{block}
+  \begin{greenblock}{LSEDA-GL algorithm}
+    \begin{itemize}
+      \item Using the Gaussian sampling, the Levy probability distribution and a restart strategy to prevent premature.
+    \end{itemize}
+  \end{greenblock}
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{13.4 Learning-based Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \tableofcontents[currentsection,currentsubsection]
+\end{frame}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{13.5 Discussions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \tableofcontents[currentsection,currentsubsection]
+\end{frame}
 
 \end{document}
