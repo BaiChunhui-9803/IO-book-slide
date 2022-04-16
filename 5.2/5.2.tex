@@ -217,6 +217,75 @@
       \item \alert{Rmeta-EP}, which cooperates covariances and standard deviations for self-adaptation.
     \end{itemize}
   \end{block}
+  \begin{blueblock}{The key elements in the process of EP algorithms}
+    \begin{itemize}
+      \item Representation of solutions
+      \item Mutation operators
+      \item Selection mechanisms
+    \end{itemize}
+  \end{blueblock}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Classical Evolutionary Programming}}
+  \begin{greenblock}{}
+    The optimization domain $\bm x$, the space dimension ${D}$, the variances $\bm{\nu}$, the domain of real numbers $\mathbb{R}$.
+  \end{greenblock}
+  \begin{block}{Representation}
+    Individuals of standard EP can be described as:
+    \begin{align}
+      \mathbf{p}=(\bm{x},\bm{\nu})\tag{1}
+    \end{align}
+    where $\bm{x}\in\mathbb{R}^{D}$, $\bm{\nu}=\bm{0}$. \\
+    Slightly different from standard EP, individuals in meta-EP represent can be described as:
+    \begin{align}
+      \mathbf{p}=(\bm{x},\bm{\nu})\tag{2}
+    \end{align}
+    where $\bm{x}\in\mathbb{R}^{D}, \bm{\nu}\in\mathbb{R_{+}}^{D}$.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Classical Evolutionary Programming}}
+  \begin{greenblock}{}
+    In standard EP, Gaussian mutation\index{G!Gaussian mutation} operator, with the form of $\mathbf{m}=(\{\beta_{1},\dots,\beta_{{D}}\}, \{\gamma_{1},\dots,\gamma_{{D}}\})$, is applied, where proportionality constant vector $\bm{\beta}$ and offset $\bm{\gamma}$ are parameters that must be tuned for a particular task. Often, however, constants in $\bm{\beta}$ and $\bm{\gamma}$ are set to one and zero respectively.
+  \end{greenblock}
+  \begin{block}{Mutation (standard EP)}
+    The operator works with a standard deviation that is determined by the square root of a linear transformation of the fitness value $f(\bm{x})$ for each element in variable vector. Mutating with Gaussian mutation operator, the element $ x_i $ in variable vector $ \bm{x} $ updated by:
+    \begin{align}
+      x'_{i}\leftarrow x_{i}+\sqrt{\beta_{i}\cdot f(\bm{x})+\gamma_{i}}\cdot \mathcal{N}_i(0,1)\tag{3}
+      \end{align}
+      where $\beta_{i}=1,\gamma_{i}=0$ are commonly used, therefore the mutation operator can be simplified:
+      \begin{align}
+      x'_{i}\leftarrow x_{i}+\sqrt{f(\bm{x})}\cdot \mathcal{N}_{i}(0,1)\tag{4}
+      \end{align}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Classical Evolutionary Programming}}
+  \begin{block}{The difficulties of the mutation operator used in standard EP}
+    \begin{itemize}
+      \item When the fitness value is large, the step size in the search will be large, which results in almost like random search.
+      \item It needs lots of efforts to tune the extra 2D parameters.
+      \item If the fitness value of global optimum is not zero, the approaching to the global optimum is not possible.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-The Classical Evolutionary Programming}}
+  \begin{block}{Mutation (meta-EP)}
+    Compared with standard EP, meta-EP has main specialty of adapting variances to overcome the tuning difficulties. Different mutation operators combined with the variances vector $\bm{\nu} $ are applied:
+    \begin{align}
+      x'_i\leftarrow x_i+\sqrt{\nu_i}\cdot \mathcal{N}_i(0,1)\tag{5}\\
+      \nu_i\leftarrow \nu_i+\sqrt{\zeta\cdot\nu_i}\cdot \mathcal{N}_i(0,1)\tag{6}
+    \end{align}
+    where the parameter $ \zeta $ is introduced to assure $ \bm{\nu} $ to be positive all the time.
+  \end{block}
+  \begin{block}{Selection}
+    Carrying out the mutation policy, all individuals produce its offspring, resulting in a larger population with the size of $2\mathtt{N}$. To reduce the size from $2\mathtt{N}$ back to $\mathtt{N}$, selection mechanism is requisite. For example, the tournament selection is a popular method to weed out $\mathtt{N}$ individuals based on fitness value in the pairwise comparison.
+  \end{block}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -225,6 +294,52 @@
   \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
+\begin{frame}
+  {Evolutionary Programming\small{-Framework and Parameter Settings}}
+  \begin{block}{}
+    \begin{algorithm}[H]
+      \SetAlgoLined
+      \KwIn{Maximum Generation $G_{\max}$}
+      \textbf{Initialization}: $ t=0 $, $ \mathbb{P}(t)=\{ \mathbf{p}_i(t)\}$,$\mathbf{p}_i=(\bm{x}_i,\bm{\nu}_i,f(\bm{x}_i))),i=1,\cdots,N$ \;
+      {\bf Evaluate all individuals}\; %算法的输入， \hspace*{0.02in}用来控制位置，同时利用 \\ 进行换行
+      \While{$t<G_{\max}$}{
+      {\bf Mutate:} $\bm{x}_i(t+1)= \bm{x}_i(t)+\sqrt{\bm{\nu}_i(t)}\cdot \bm{\mathcal{N}}(0,1) $\;
+      {\bf Evaluate: } $ f(\bm{x}(t+1)) $\;
+      {\bf Select: }$  \mathbb{P}(t+1)= \mathbb{P}(t)\bigcup New\, Generated$\;
+      $ t:=t+1 $\;
+      }
+      \caption{meta-EP algorithm} \label{alg:meta-EP algorithm}
+    \end{algorithm}
+  \end{block}
+  \begin{block}{}
+    The algorithm starts with a set of solutions with randomly generated positions and mutation step sizes. Then the population undergoes mutation, evaluation, and selection procedures until the stop criterion is satisfied. 
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Evolutionary Programming\small{-Framework and Parameter Settings}}
+  \begin{block}{Parameter settings for standard EP and meta-EP}
+    The default parameter settings of standard EP and meta-EP can be seen in \text{Table~\ref{tab:parameters of EP and mea-EP}.}
+    \begin{table}[h!t]
+      \begin{minipage}{\textwidth}
+      \centering
+      \caption[Parameter settings for standard EP and meta-EP]{Parameter settings for standard EP and meta-EP}\label{tab:parameters of EP and mea-EP}
+      \fbox{%
+      \begin{tabular}{|c|c|c|c|} %表格7列 全部居中显示
+      \hline
+      \textbf{Paramter} & \textbf{EP} & \textbf{meta-EP} & \textbf{Default}\\\hline
+      Domain range $ l_i, u_i $ & $ \times $ &$ \times $ & $ l_i=-50,u_i=50 $\\\hline
+      Upper bound $ c $ of $ \sigma_i $ &  & $  \times$ & $ c=25 $\\\hline
+      Proportionality constants $ \beta_i $ & $ \times $ & & $ \beta_i=1 $\\\hline
+      Offset constants $ \gamma_{i} $ & $ \times $ & & $ \gamma_{i}=0 $\\\hline
+      Meta-parameter $ \zeta $ for adaptation & & $ \times $  & $\zeta=6 $\\\hline
+      Tournament size $ q $ & $ \times $& $ \times $ & $ q=10 $\\\hline
+      Population size $ N $ & $ \times $ & $ \times $ & $ N=200 $\\\hline
+      \end{tabular}}
+      \end{minipage}
+      \end{table}
+  \end{block}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{5.2.4 Recent Advances in Evolutionary Programming}
@@ -232,5 +347,11 @@
   \tableofcontents[currentsection,currentsubsection]
 \end{frame}
 
+\begin{frame}
+  {Evolutionary Programming\small{-Framework and Parameter Settings}}
+  \begin{block}{}
+    Ever since the EP was applied to continuous optimization problems, the adaptive and hybrid mechanisms have become the norm for the EP framework. The main reasons for the trend are:
+  \end{block}
+\end{frame}
 
 \end{document}

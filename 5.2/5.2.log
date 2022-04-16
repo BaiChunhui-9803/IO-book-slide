@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  15 APR 2022 23:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  16 APR 2022 18:03
 entering extended mode
 **d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex
 (d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex
@@ -1124,11 +1124,93 @@ Missing character: There is no 8 in font nullfont!
 ]
 Missing character: There is no 8 in font nullfont!
 Missing character: There is no 7 in font nullfont!
- [12
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 2 in font nullfont!
 
-] (5.2.toc) [13
+Overfull \vbox (4.72818pt too high) detected at line 227
+ []
 
-] (5.2.toc) [14
+[12
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 246.
+ (D:\0BCH\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 246.
+ (D:\0BCH\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+
+
+LaTeX Font Warning: Font shape `TU/lmr/b/it' in size <10> not available
+(Font)              Font shape `TU/lmr/b/sl' tried instead on input line 246.
+
+
+LaTeX Font Warning: Font shape `TU/lmr/b/it' in size <7> not available
+(Font)              Font shape `TU/lmr/b/sl' tried instead on input line 246.
+
+
+LaTeX Font Warning: Font shape `TU/lmr/b/it' in size <5> not available
+(Font)              Font shape `TU/lmr/b/sl' tried instead on input line 246.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+[13
+
+]
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+ [14
+
+]
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+ [15
+
+]
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+ [16
+
+] (5.2.toc) [17
+
+]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 317.
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+ [18
+
+]
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+ [19
+
+] (5.2.toc) [20
+
+]
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+ [21
 
 ]
 \tf@nav=\write6
@@ -1142,15 +1224,15 @@ Missing character: There is no 7 in font nullfont!
 
  (5.2.aux)
 Package rerunfilecheck Info: File `5.2.out' has not changed.
-(rerunfilecheck)             Checksum: D73AEFD6126E8F052FF59D0FACFE9B0E;1359.
+(rerunfilecheck)             Checksum: 79507D6F23E7CFE433CEC08E8DFB4D03;1359.
  ) 
 Here is how much of TeX's memory you used:
- 28914 strings out of 411247
- 590144 string characters out of 2834323
+ 29137 strings out of 411247
+ 596261 string characters out of 2834323
  1134924 words of memory out of 3000000
- 48805 multiletter control sequences out of 15000+600000
- 404022 words of font info for 57 fonts, out of 8000000 for 9000
+ 48977 multiletter control sequences out of 15000+600000
+ 408638 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 142i,11n,138p,1024b,895s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 142i,20n,138p,1024b,895s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 5.2.xdv (14 pages, 176328 bytes).
+Output written on 5.2.xdv (21 pages, 294608 bytes).

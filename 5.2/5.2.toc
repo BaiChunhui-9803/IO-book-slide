@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{5.2 Evolutionary Programming}{4}{0}{1}
 \beamer@subsectionintoc {1}{1}{5.2.1 The Emerging of Evolutionary Programming}{5}{0}{1}
 \beamer@subsectionintoc {1}{2}{5.2.2 The Classical Evolutionary Programming}{10}{0}{1}
-\beamer@subsectionintoc {1}{3}{5.2.3 Framework and Parameter Settings}{13}{0}{1}
-\beamer@subsectionintoc {1}{4}{5.2.4 Recent Advances in Evolutionary Programming}{14}{0}{1}
+\beamer@subsectionintoc {1}{3}{5.2.3 Framework and Parameter Settings}{17}{0}{1}
+\beamer@subsectionintoc {1}{4}{5.2.4 Recent Advances in Evolutionary Programming}{20}{0}{1}
