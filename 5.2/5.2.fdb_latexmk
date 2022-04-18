@@ -1,14 +1,14 @@
 # Fdb version 3
-["xdvipdfmx"] 1650103411 "5.2.xdv" "5.2.pdf" "5.2" 1650103411
-  "5.2.xdv" 1650103410 294608 e4aaf36d2c30f6f111cfa7b80ad70cbf "xelatex"
+["xdvipdfmx"] 1650284345 "5.2.xdv" "5.2.pdf" "5.2" 1650284346
+  "5.2.xdv" 1650284345 276112 e6a94eaf75e713777ffaeab2fb33a351 "xelatex"
   (generated)
   "5.2.pdf"
-["xelatex"] 1650103402 "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex" "5.2.xdv" "5.2" 1650103411
-  "5.2.aux" 1650103410 7022 c1354bc95ed6e2ff8a8a599702143769 "xelatex"
-  "5.2.nav" 1650103410 3643 1522f0e86f6a95d009717cdfb697cd71 "xelatex"
-  "5.2.out" 1650103410 1359 79507d6f23e7cfe433cec08e8dfb4d03 "xelatex"
-  "5.2.tex" 1650103390 17566 063a0aaecf0af5678099bf2756408900 ""
-  "5.2.toc" 1650103410 412 5b783b11eb38c9e10819fc9b94a82954 "xelatex"
+["xelatex"] 1650284338 "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex" "5.2.xdv" "5.2" 1650284346
+  "5.2.aux" 1650284345 6286 5c33d323d3b654a0129cf75e239da86b "xelatex"
+  "5.2.nav" 1650284345 3209 a97eb045205ca4f25f04b075803a51a2 "xelatex"
+  "5.2.out" 1650284345 1041 2cd070c20797fce6e8535e755d68f6e1 "xelatex"
+  "5.2.tex" 1650284322 17832 2338f114ad596db3c14d95bba6ebcf3c ""
+  "5.2.toc" 1650284345 320 0437af31cf3a20a9f9e34644d4674dfa "xelatex"
   "C:/Users/Dell/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1643033491 23113792 6402ccc02b1fe146ac073ebe58cc8857 ""
   "D:/0BCH/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "D:/0BCH/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -234,7 +234,7 @@
   "D:/0BCH/MiKTeX/tex/xelatex/xecjk/xeCJK-listings.sty" 1603132118 13930 90d50d7e6766b4772360502f997a9172 ""
   "D:/0BCH/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1603132118 408 1981e3b80ee2804b42048f88981cf6ef ""
   "D:/0BCH/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1603132118 180725 b63aab970a0b297a5ae2ef5421b881ec ""
-  "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex" 1650103390 17566 063a0aaecf0af5678099bf2756408900 ""
+  "d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex" 1650284322 17832 2338f114ad596db3c14d95bba6ebcf3c ""
   (generated)
   "5.2.aux"
   "5.2.log"

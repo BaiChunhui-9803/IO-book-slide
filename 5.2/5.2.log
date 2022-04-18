@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  16 APR 2022 18:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2022.1.24)  18 APR 2022 20:18
 entering extended mode
 **d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex
 (d:/白春辉/研究生/管理文件/课题组/智能优化教材/智能优化与最优化方法/ppt/iobook-ppt/5.2/5.2.tex
@@ -1204,14 +1204,6 @@ Missing character: There is no 4 in font nullfont!
 Missing character: There is no 2 in font nullfont!
  [19
 
-] (5.2.toc) [20
-
-]
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no 7 in font nullfont!
- [21
-
 ]
 \tf@nav=\write6
 \openout6 = `5.2.nav'.
@@ -1224,15 +1216,15 @@ Missing character: There is no 7 in font nullfont!
 
  (5.2.aux)
 Package rerunfilecheck Info: File `5.2.out' has not changed.
-(rerunfilecheck)             Checksum: 79507D6F23E7CFE433CEC08E8DFB4D03;1359.
+(rerunfilecheck)             Checksum: 2CD070C20797FCE6E8535E755D68F6E1;1041.
  ) 
 Here is how much of TeX's memory you used:
- 29137 strings out of 411247
- 596261 string characters out of 2834323
+ 29123 strings out of 411247
+ 595934 string characters out of 2834323
  1134924 words of memory out of 3000000
- 48977 multiletter control sequences out of 15000+600000
+ 48965 multiletter control sequences out of 15000+600000
  408638 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  142i,20n,138p,1024b,895s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 5.2.xdv (21 pages, 294608 bytes).
+Output written on 5.2.xdv (19 pages, 276112 bytes).

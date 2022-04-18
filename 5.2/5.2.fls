@@ -1624,9 +1624,6 @@ INPUT D:\0BCH\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
 INPUT .\5.2.toc
 INPUT 5.2.toc
 INPUT 5.2.toc
-INPUT .\5.2.toc
-INPUT 5.2.toc
-INPUT 5.2.toc
 OUTPUT 5.2.nav
 OUTPUT 5.2.toc
 OUTPUT 5.2.snm
