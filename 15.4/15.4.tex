@@ -113,11 +113,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{15.4 Games}
 \begin{frame}
-  {Evolutionary Programming}
+  {Games}
   \begin{block}{}
-    Evolutionary programming (EP) was firstly proposed to simulate the evolution process and
-    generate artificial intelligence and then applied in optimization domains.
+    For AI research, researchers attempt to devise computational systems that would exhibit aspects of \alert{human intelligence} and achieve \alert{human-level} problem solving or decision making abilities.
   \end{block}
+  \begin{block}{}
+    The highly formalized, symbolic representation allowed AI to success in many cases.
+  \end{block}
+  \begin{greenblock}{}
+    Naturally, games, especially board games, have been a popular domain for AI researches as they are \alert{formal} and \alert{highly constrained}, yet \alert{complex}, decision making environments. 
+  \end{greenblock}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -127,12 +132,69 @@
 \end{frame}
 
 \begin{frame}
-  {Evolutionary Programming\small{-The Emerging of Evolutionary Programming}}
-  \begin{block}{}
-    There is a consistent pursuing for our human to obtain the artificial intelligence.
+  {Games\small{-Applications}}
+  \begin{yellowblock}{}
+    There are two main applications of intelligent optimization on games:
+    \begin{itemize}
+      \item Game playing
+      \item Content generation
+    \end{itemize}
+  \end{yellowblock}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-Applications}}
+  \begin{block}{Game Playing}
+    For game playing, there are two main ways to use the intelligent optimization:
+    \begin{itemize}
+      \item Offline optimization: Optimizing the parameters of a pre-defined controller, then using the optimized controller to play the game.
+      \item Online optimization (or evolutionary planning): Optimizing the actions to be deployed while the game is running.
+    \end{itemize}
   \end{block}
 \end{frame}
 
+\begin{frame}
+  {Games\small{-Applications}}
+  \begin{block}{In the offline optimization}
+    The intelligent optimization algorithm can be combined with many other methods. In particular, using EAs to evolve: 
+    \begin{itemize}
+      \item the weights and/or topology of \alert{neural networks}, 
+      \item or \alert{programs}, typically structured as expression trees (e.g., genetic programming), 
+      \item or some other \alert{models}, such as potential field.
+    \end{itemize}
+    This fitness evaluation consists of using the neural network, program or other models to play the game, and using the \alert{result (e.g., score) as a fitness function}.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-Applications}}
+  \begin{block}{In the online optimization}
+    The basic idea is to optimize the \alert{action sequence} you want to deploy from now on. Evaluating such an action sequence is done by taking all the actions of the sequence in \alert{simulation}, and observing the results after taking all those actions.
+  \end{block}
+  \begin{block}{}
+    The online optimization has been applied on several types of games such as: 
+    \begin{itemize}
+      \item arcade game
+      \item turn-based strategy game
+      \item real-time strategy game
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-Applications}}
+  \begin{block}{Content Generation}
+    Procedural content generation refers to the methods which generate game content either automatically or with only limited human input, such as: 
+    \begin{itemize}
+      \item levels
+      \item maps
+      \item game rules
+    \end{itemize}
+  \end{block}
+  \begin{blueblock}{}
+    The search-based methods are widely used in this area because we will eventually get the solution we want if we keep iterating and tweaking solutions by keeping the good changes and discarding the bad changes. 
+  \end{blueblock}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{15.4.2 A Simple Example of Real-time Strategy Game}
 \begin{frame}
@@ -140,7 +202,7 @@
 \end{frame}
 
 \begin{frame}
-  {Evolutionary Programming\small{-The Emerging of Evolutionary Programming}}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
   \begin{block}{}
     There is a consistent pursuing for our human to obtain the artificial intelligence.
   \end{block}
