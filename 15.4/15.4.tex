@@ -203,9 +203,202 @@
 
 \begin{frame}
   {Games\small{-A Simple Example of Real-time Strategy Game}}
-  \begin{block}{}
-    There is a consistent pursuing for our human to obtain the artificial intelligence.
+  \begin{block}{A simple online optimization example}
+    Playing a simple scene in a famous real-time strategy (RTS) game: StarCraft II
   \end{block}
+  \begin{block}{}
+    The features of a RTS game bring some challenges for AI research, including: 
+    \begin{itemize}
+      \item Incomplete information
+      \item Long term planning
+      \item Large search space
+      \item Real time
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+    \begin{block}{Scenario Settings}
+      The figure presents an example map for a game scenario: 
+    \end{block}
+    \begin{block}{Components}
+      \begin{itemize}
+        \item Three Thors and one Marine in our team
+        \item Some Auto-turrets in the enemy team
+        \item Some toxic areas in the middle of the map, which will harm our units
+      \end{itemize}
+    \end{block}
+  \column{0.4\textwidth}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=0.5\textwidth]{fig15-4-TvsA.pdf}
+    \caption{An example map: Auto-turrets vs Thors and a Marine, where toxic areas are indicated in green}
+    \label{fig15-4-AvsT}
+    \end{figure}
+  \end{columns}
+  \begin{blueblock}{}
+    The focus of this scenario is to test whether the algorithm can find and maintain reasonable tactical positions for different units. 
+  \end{blueblock}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{A Multi-objective Approach}
+    \begin{itemize}
+      \item The algorithm runs in the online mode within a given time during the game.
+      \item A solution is selected and deployed when the running time is over. 
+    \end{itemize}
+  \end{block}
+  \begin{block}{Components}
+    \begin{itemize}
+      \item Solution representation
+      \item Problem representation
+      \item Evaluation
+      \item Selection
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{Solution representation}
+    A solution contains the sequence of actions to be performed by all units in the next period of time.
+  \end{block}
+  \begin{block}{}
+    Suppose we have $M$ units, and each unit has $C$ actions, then the $j$-th action of the $i$-th unit can be represented as $a_{ij}$, $i\in\{1,2,\dots,M\}$, $j\in\{1,2,\dots,C\}$, then a solution $s$ can be represented as: 
+    \begin{equation*}
+      \bm x =
+      \begin{pmatrix}
+      a_{11} & a_{12} & \cdots & a_{1C} \\
+      a_{21} & a_{22} & \cdots & a_{2C} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      a_{M1} & a_{M2} & \cdots & a_{MC}
+      \end{pmatrix}
+      \end{equation*}
+      where $a$ is a 2-tuple, i.e., $a=(actionId, targetPoint)$,  $actionId$ represents the action to be deployed and $targetPoint$ determines the target location of the action.
+  \end{block}
+  \begin{yellowblock}{}
+    To simplify the problem, we only take the attack action into consideration.
+  \end{yellowblock}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{Problem representation}
+    The problem is transformed to a dynamic multi-objective optimization problem, which is shown below: 
+  \end{block}
+  \begin{block}{}
+    where $t_0$ and $t$ denote the starting and ending time of a simulation; $M_t$ and $N_t$ denote the number of units of our team and the enemy team at simulation time $t$ ; $h_i$ and $s_i$ are the health points and shield of unit $i$;   $t^{end}$ is the loop at which the simulation ends when one team has been eliminated. 
+  \end{block}
+  \begin{block}{}
+    \begin{align}
+      \max f_1(x(t)) & = - (\sum_{i=1}^{M_t} (h_i(x(t_0)) + s_i(x(t_0)) - h_i(x(t)) - s_i(x(t))) \tag{1}   \\
+      \max f_2(x(t)) & = \sum_{i=M_t+1}^{M_t+N_t}(h_i(x(t_0)) +s_i(x(t_0)) - h_i(x(t)) - s_i(x(t))) \tag{2}
+      \end{align}
+  \end{block}
+  \begin{block}{}
+    $f_1$ and $f_2$ are the damage of both teams during the simulation, respectively.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{}
+    where $t_0$ and $t$ denote the starting and ending time of a simulation; $M_t$ and $N_t$ denote the number of units of our team and the enemy team at simulation time $t$ ; $h_i$ and $s_i$ are the health points and shield of unit $i$;   $t^{end}$ is the loop at which the simulation ends when one team has been eliminated. 
+  \end{block}
+  \begin{block}{}
+    \begin{align}
+      \max f_3(x(t)) & =
+      \begin{cases}
+      -(t^{end}(x(t))-t_0)&\text{if win}\\ \tag{3}
+      -(t-t_0) &\text{else}
+      \end{cases}\\
+      \max f_4(x(t)) &=
+      \begin{array}{lr}
+      \sum^{M_t+N_t}_{i=M_t+1}\left(\min_{i\le j \le M_t} \mathrm{Dis}\left(p_i(x(t_0)), p_j(x(t_0))\right) \right.- \tag{4}\\
+       \left.\min_{1\le j\le M_t} \textrm{Dis}\left(p_i(x(t), p_j(x(t)))\right)\right)
+      \end{array}
+      \end{align}
+  \end{block}
+  \begin{block}{}
+    $f_3$ is the duration of the game when any team is completely destroyed in the simulation; \\
+    $f_4$ is used to guide our team to move to the target position, especially when our team can not get near enough to fight against the enemy during the simulation as $f_1, f_2, f_3$ can not obtain valid values (the values of $f_1, f_2, f_3$ for all solutions are the same of zero if no fight happens).
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{}
+    Considering the importance of the four objectives, the more important objectives f1, f2, f3 could be used first to sort the solutions, then the f4.
+  \end{block}
+  \begin{yellowblock}{}
+    So this model can be regarded as a two-level four-objective dynamic optimization problem.
+  \end{yellowblock}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{Evaluation}
+    A solution is evaluated through the simulation. 
+  \end{block}
+  \begin{yellowblock}{}
+    The debug interface of SC2API can be used to call other game processes running simultaneously to copy the current state and the orders in the solution then forward the game to a certain period.
+  \end{yellowblock}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{}
+    After the evolutionary search, a set of non-dominated solutions may be obtained. However, only one of the solutions  $\tilde{x}(t)$ at time will be selected and deployed. A rule-based method is used for the decision-making. 
+  \end{block}
+  \begin{block}{Selection}
+    he solution is selected based on the current total points of both team: 
+  \end{block}
+  \begin{block}{}
+    \begin{align}
+      \tilde{x}(t)=\, & \arg \max_{x(t)} (\frac{f_1(x(t))}{\sum_{i=1}^{M_{t_0}}(h_i(x(t_0))+s_i(x(t_0)))} + \frac{f_2(x(t))} {\sum^{M_{t_0}+N_{t_0}}_{i=M_{t_0}+1}(h_i(x(t_0))+s_i(x(t_0))}) \tag{5}
+      \end{align}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{Results and Discussions}
+    The algorithm can led our Thors approach the enemies along a narrow security area then stand outside the enemies’ fire range to attack them. The only Marine roams outside the enemies’ fire range.
+  \end{block}
+  \begin{columns}[T]
+    \column{0.6\textwidth}
+    \begin{figure}[width=0.3\textwidth,height=0.3\textwidth]
+      \centering
+      \includegraphics{fig15-4-x-gameshot}
+      % \caption{Screenshot in the game}
+    \end{figure}
+    \column{0.35\textwidth}
+    \begin{greenblock}{Results and Discussions}
+      The algorithm can led our Thors approach the enemies along a narrow security area then stand outside the enemies’ fire range to attack them.
+    \end{greenblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  {Games\small{-A Simple Example of Real-time Strategy Game}}
+  \begin{block}{}
+    This is just a simple example with some static enemies.
+  \end{block}
+  \begin{block}{Results and Discussions}
+    \begin{itemize}
+      \item When there are movable enemies, it needs to handle the uncertainty of the enemy strategy. 
+      \item In terms of understanding the enemy, opponent modeling can help. 
+      \item If the algorithm run without any priori knowledge, adversarial co-evolution could be a way to generate reasonable solutions.
+      \item To make the solutions more robust, more adaptable for various scenario, robust optimization can be useful.
+    \end{itemize}
+  \end{block}
+  \begin{yellowblock}{}
+    A special algorithm with some problem-specific search operators, which takes correlation between units and actions into consideration rather than basic EAs, would be more effective in solving this problem.
+  \end{yellowblock}
 \end{frame}
 
 \end{document}
